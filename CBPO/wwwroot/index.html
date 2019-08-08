@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
+    <script src="js/site.js"></script>
+    <link rel="stylesheet" href="css/standard.css" />
+    <title>Earn-A-Bike Tracker</title>
+</head>
+<body>
+    <form class="basic-demographics">
+        <p>First Name</p>
+        <input type="text" name="firstname" value="First Name" />
+        <p>Last Name</p><input type="text" name="lastname" value="Last Name" />
+        <p>Street Address</p>
+        <input type="text" name="streetaddress" value="Street Address" />
+        <p>City</p>
+        <input type="text" name="city" value="City" />
+        <p>State</p>
+        <input type="text" name="state" value="State" />
+        <p>Zip</p>
+        <input type="text" name="zip" value="Zip" />
+    </form>
+    <form class="youth-demographics">
+        <p>School</p>
+        <input type="text" name="school" value="School" />
+        <p>Parent/Guardian Email</p>
+        <input type="text" name="parent-guardian-email" value="Parent/Guardian Email" />
+        <p>Parent/Guardian Phone</p>
+        <input type="text" name="parent-guardian-phone" value="Parent/Guardian Phone" />
+        <p>Free/Reduced Lunch</p>
+        <select name="free-reduced-lunch">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+    </form>
+    <form class="adult-demographics">
+        <p>Income</p>
+        <input type="text" value="Income" />
+        <p>Employer</p>
+        <input type="text" value="Employer" />
+    </form>
+    <form class="checklist">
+        <p class="checklist-category">Bike Information</p>
+        <span>Brand</span> <input type="text" name="brand" value="Brand" />
+        <span>Model</span> <input type="text" name="model" value="Model" />
+        <span>Serial Number</span> <input type="text" name="serial-number" value="Serial Number" />
+        <span>Color</span> <input type="text" name="color" value="Color" />
+        <img class="bike-picture" src="" alt="" />
+        <span>Lock Combination</span> <input type="text" name="lock-combination" value="Lock Combination" />
+        <p class="checklist-category">Frame</p>
+            <span>Clean/Inspect for Cracks</span>
+                <select name="clean-inspect">
+                    <option value="not-started">Not Started</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+            <span>Grease Seatpost</span>
+                <select name="grease-seatpost">
+                    <option value="not-started">Not Started</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+        <p class="checklist-category">Fork/Headset</p>
+            <span>Inspect Fork for Cracks/Bends</span> 
+                <select name="inspect-cracks-bends">
+                    <option value="not-started">Not Started</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>  
+            <span>Grease Stem</span> 
+            <select name="grease-stem">
+                <option value="not-started">Not Started</option>
+                <option value="in-progress">In Progress</option>
+                <option value="completed">Completed</option>
+            </select>
+    </form>
+</body>
+</html>
