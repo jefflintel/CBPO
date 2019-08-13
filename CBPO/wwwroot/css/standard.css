@@ -1,0 +1,19 @@
+﻿body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #f0f0f0;
+    background-color: #054376;
+    font-family: Arial;
+}
+
+.hidden {
+    display: none;
+}
+
+.youth-button, .adult-button, .basic-clear-button, .submit-button, .clear-button, .search-button, .zip-code-button, .income-button, .age-button {
+    border: 2px solid #f0f0f0;
+    text-align: center;
+    margin-top: 1ch;
+}

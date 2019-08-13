@@ -10,72 +10,229 @@
     <title>Earn-A-Bike Tracker</title>
 </head>
 <body>
-    <form class="basic-demographics">
-        <p>First Name</p>
-        <input type="text" name="firstname" value="First Name" />
-        <p>Last Name</p><input type="text" name="lastname" value="Last Name" />
-        <p>Street Address</p>
-        <input type="text" name="streetaddress" value="Street Address" />
-        <p>City</p>
-        <input type="text" name="city" value="City" />
-        <p>State</p>
-        <input type="text" name="state" value="State" />
-        <p>Zip</p>
-        <input type="text" name="zip" value="Zip" />
-    </form>
-    <form class="youth-demographics">
-        <p>School</p>
-        <input type="text" name="school" value="School" />
-        <p>Parent/Guardian Email</p>
-        <input type="text" name="parent-guardian-email" value="Parent/Guardian Email" />
-        <p>Parent/Guardian Phone</p>
-        <input type="text" name="parent-guardian-phone" value="Parent/Guardian Phone" />
-        <p>Free/Reduced Lunch</p>
-        <select name="free-reduced-lunch">
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-        </select>
-    </form>
-    <form class="adult-demographics">
-        <p>Income</p>
-        <input type="text" value="Income" />
-        <p>Employer</p>
-        <input type="text" value="Employer" />
-    </form>
-    <form class="checklist">
-        <p class="checklist-category">Bike Information</p>
-        <span>Brand</span> <input type="text" name="brand" value="Brand" />
-        <span>Model</span> <input type="text" name="model" value="Model" />
-        <span>Serial Number</span> <input type="text" name="serial-number" value="Serial Number" />
-        <span>Color</span> <input type="text" name="color" value="Color" />
-        <img class="bike-picture" src="" alt="" />
-        <span>Lock Combination</span> <input type="text" name="lock-combination" value="Lock Combination" />
-        <p class="checklist-category">Frame</p>
-            <span>Clean/Inspect for Cracks</span>
-                <select name="clean-inspect">
-                    <option value="not-started">Not Started</option>
-                    <option value="in-progress">In Progress</option>
-                    <option value="completed">Completed</option>
-                </select>
-            <span>Grease Seatpost</span>
-                <select name="grease-seatpost">
-                    <option value="not-started">Not Started</option>
-                    <option value="in-progress">In Progress</option>
-                    <option value="completed">Completed</option>
-                </select>
-        <p class="checklist-category">Fork/Headset</p>
-            <span>Inspect Fork for Cracks/Bends</span> 
-                <select name="inspect-cracks-bends">
-                    <option value="not-started">Not Started</option>
-                    <option value="in-progress">In Progress</option>
-                    <option value="completed">Completed</option>
-                </select>  
-            <span>Grease Stem</span> 
-            <select name="grease-stem">
-                <option value="not-started">Not Started</option>
-                <option value="in-progress">In Progress</option>
-                <option value="completed">Completed</option>
+    <header>
+        <input type="text" value="Search"/>
+        <div class="search-button">
+            <p>Search</p>
+        </div>
+    </header>
+    <div class="basic-demographics">
+        <form>
+            <p>First Name</p>
+            <input id="first-name" type="text" name="firstname" value="First Name" />
+            <p>Last Name</p>
+            <input id="last-name" type="text" name="lastname" value="Last Name" />
+            <p>Street Address</p>
+            <input id="street-address" type="text" name="streetaddress" value="Street Address" />
+            <p>City</p>
+            <input id="city" type="text" name="city" value="City" />
+            <p>State</p>
+            <input id="state" type="text" name="state" value="State" />
+            <p>Zip</p>
+            <input id="zip" type="text" name="zip" value="Zip" />
+            <p>Date of Birth</p>
+            <input id="dob" type="text" name="dob" value="DOB" />
+        </form>
+        <div class="youth-button">
+            <p>Youth</p>
+        </div>
+        <div class="adult-button">
+            <p>Adult</p>
+        </div>
+        <div class="basic-clear-button hidden">
+            <p>Clear</p>
+        </div>
+    </div>
+    <div class="youth-demographics hidden">
+        <form>
+            <p>School</p>
+            <input type="text" name="school" value="School" />
+            <p>Parent/Guardian Email</p>
+            <input type="text" name="parent-guardian-email" value="Parent/Guardian Email" />
+            <p>Parent/Guardian Phone</p>
+            <input type="text" name="parent-guardian-phone" value="Parent/Guardian Phone" />
+            <p>Free/Reduced Lunch</p>
+            <select name="free-reduced-lunch">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
             </select>
-    </form>
+        </form>
+    </div>
+    <div class="adult-demographics hidden">
+        <form>
+            <p>Income</p>
+            <input type="text" value="Income" />
+            <p>Employer</p>
+            <input type="text" value="Employer" />
+        </form>
+    </div>
+    <div class="submit-clear-buttons hidden">
+        <div class="submit-button">
+            <p>Submit</p>
+        </div>
+        <div class="clear-button">
+            <p>Clear</p>
+        </div>
+    </div>
+    <div class="checklist hidden">
+        <form>
+            <div class="checklist-category" id="bike-information">
+                <p class="checklist-category-title">Bike Information</p>
+                <p>Brand</p> <input type="text" name="brand" value="Brand" id="bike-brand"/>
+                <p>Model</p> <input type="text" name="model" value="Model" id="bike-model"/>
+                <p>Serial Number</p> <input type="text" name="serial-number" value="Serial Number" id="bike-serial-number"/>
+                <p>Color</p> <input type="text" name="color" value="Color" id="bike-color"/>
+                <img class="bike-picture" src="" alt="" />
+                <p>Lock Combination</p> <input type="text" name="lock-combination" value="Lock Combination" />
+            </div>
+            <div class="checklist-category" id="frame">
+                <p class="checklist-category-title">Frame</p>
+                <p>Clean/Inspect for Cracks</p>
+                    <select name="clean-inspect">
+                        <option value="not-started">Not Started</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                <p>Grease Seatpost</p>
+                    <select name="grease-seatpost">
+                        <option value="not-started">Not Started</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="completed">Completed</option>
+                    </select>
+            </div>
+            <div class="checklist-category" id="fork-headset">
+                <p class="checklist-category-title">Fork/Headset</p>
+                <p>Inspect Fork for Cracks/Bends</p>
+                    <select name="inspect-cracks-bends">
+                        <option value="not-started">Not Started</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                <p>Grease Stem</p>
+                    <select name="grease-stem">
+                        <option value="not-started">Not Started</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="completed">Completed</option>
+                    </select>
+            </div>
+            <div class="checklist-category" id="drivetrain">
+                <p class="checklist-category-title">Drivetrain</p>
+                <p>Repack Bottom Bracket</p>
+                <select name="repack-bottom-bracket">
+                    <option value="not-started">Not Started</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <p>Grease Pedal Threads</p>
+                <select name="grease-pedal-threads">
+                    <option value="not-started">Not Started</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <p>Cable and Adjust Front Derailleur</p>
+                <select name="cable-adjust-front-derailleur">
+                    <option value="not-started">Not Started</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <p>Cable and Adjust Rear Derailleur</p>
+                <select name="cable-adjust-rear-derailleur">
+                    <option value="not-started">Not Started</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <p>Check Chain for Stretch</p>
+                <select name="check-chain-stretch">
+                    <option value="not-started">Not Started</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <p>Clean and Oil Chain</p>
+                <select name="clean-oil-chain">
+                    <option value="not-started">Not Started</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+            </div>
+            <div class="checklist-category" id="brakes">
+                <p class="checklist-category-title">Brakes</p>
+                <p>Cable and Adjust Front Brake</p>
+                <select name="cable-adjust-front-brake">
+                    <option value="not-started">Not Started</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <p>Cable and Adjust Rear Brake</p>
+                <select name="cable-adjust-rear-brake">
+                    <option value="not-started">Not Started</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+            </div>
+            <div class="checklist-category" id="wheels">
+                <p class="checklist-category-title">Wheels</p>
+                <p>Repack Front Hub</p>
+                <select name="repack-front-hub">
+                    <option value="not-started">Not Started</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <p>True Front Wheel</p>
+                <select name="true-front-wheel">
+                    <option value="not-started">Not Started</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <p>Repack Rear Hub</p>
+                <select name="repack-rear-hub">
+                    <option value="not-started">Not Started</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <p>True Rear Wheel</p>
+                <select name="true-rear-wheel">
+                    <option value="not-started">Not Started</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <p>Inflate Tires to Proper Pressure</p>
+                <select name="inflate-to-proper-pressure">
+                    <option value="not-started">Not Started</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+            </div>
+            <div class="checklist-category" id="test-ride">
+                <p class="checklist-category-title">Test Ride</p>
+                <p>Tires Holding Air</p>
+                <select name="tires-holding-air">
+                    <option value="not-started">Not Started</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <p>Accurate Shifting</p>
+                <select name="accurate-shifting">
+                    <option value="not-started">Not Started</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <p>Good Braking Power</p>
+                <select name="good-braking-power">
+                    <option value="not-started">Not Started</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <p>Riding Class Completed</p>
+                <select name="riding-class-completed">
+                    <option value="not-started">Not Started</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+            </div>
+        </form>
+    </div>
+    <div class="update-checklist">
+        <p>Update</p>
+    </div>
 </body>
 </html>

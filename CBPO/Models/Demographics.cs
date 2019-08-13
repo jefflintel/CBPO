@@ -23,7 +23,7 @@ namespace CBPO.Models
         public String School { get; set; }
         public String ParentGuardianEmail { get; set; }
         public String ParentGuardianPhone { get; set; }
-        public Boolean ReducedLunch { get; set; }
+        public String ReducedLunch { get; set; }
         public Boolean Consent { get; set; }
         public int Income { get; set; }
         public String Employer { get; set; }
